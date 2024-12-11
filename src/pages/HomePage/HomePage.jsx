@@ -26,7 +26,6 @@ const cars = [
 const HomePage = () => {
     return (
         <div className="homepage">
-            <h1>Наши модели</h1>
             <div className="homepage__cars">
                 {cars.map((car, index) => (
                     <CarCard
