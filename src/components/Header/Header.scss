@@ -1,0 +1,63 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  &__logos {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      height: 40px;
+      margin-right: 10px;
+
+      &.jetour {
+        margin-right: 15px;
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    gap: 20px;
+
+    a {
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+      font-weight: bold;
+
+      &:hover {
+        color: #007bff;
+      }
+    }
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+
+    &__phone {
+      margin-right: 15px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    &__button {
+      padding: 8px 16px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+
+      &:hover {
+        background-color: #218838;
+      }
+    }
+  }
+}
