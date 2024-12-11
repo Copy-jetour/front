@@ -1,0 +1,21 @@
+.homepage {
+  padding: 40px;
+  background-color: #f8f8f8;
+
+  h1 {
+    font-size: 32px;
+    color: #0d1238;
+    margin-bottom: 30px;
+  }
+
+  &__cars {
+    display: flex;
+    flex-direction: column; /* Расположение в столбец */
+    align-items: center; /* Горизонтальное центрирование */
+    justify-content: center; /* Вертикальное центрирование */
+    min-height: 100vh; /* Высота контейнера - вся высота экрана */
+    gap: 20px; /* Отступы между карточками */
+    background-color: #f9f9f9; /* Цвет фона (если нужно) */
+    padding: 20px;
+  }
+}

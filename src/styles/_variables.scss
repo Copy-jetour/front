@@ -1,0 +1,27 @@
+// Цветовая палитра
+$color-primary: #0d1238; // Основной синий цвет (фон шапки и подвала)
+$color-secondary: #f14c4c; // Красный акцентный цвет
+$color-background: #f8f8f8; // Фон страницы
+$color-text: #333; // Основной текстовый цвет
+$color-border: #e6e6e6; // Цвет границ и линий
+
+// Шрифты
+$font-family: 'Arial', sans-serif; // Основной шрифт
+$font-size-base: 16px; // Базовый размер шрифта
+$font-size-large: 18px;
+$font-size-small: 14px;
+
+// Отступы
+$spacing-small: 10px;
+$spacing-medium: 20px;
+$spacing-large: 40px;
+
+// Тени
+$box-shadow-light: 0px 4px 8px rgba(0, 0, 0, 0.1);
+$box-shadow-hover: 0px 8px 16px rgba(0, 0, 0, 0.2);
+
+// Радиус
+$border-radius: 8px;
+
+// Прочее
+$transition-default: 0.3s ease;

@@ -1,0 +1,129 @@
+.car-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+    padding: 20px;
+    overflow: hidden;
+    gap: 15px;
+}
+
+.car-card__image-wrapper {
+    position: relative;
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.car-card__discount {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #5dc0a6;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.car-card__image {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.car-card__content {
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+}
+
+.car-card__model {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.car-card__offers {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.car-card__offer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.car-card__offer span {
+    font-size: 20px;
+    color: #5dc0a6;
+    margin-right: 10px;
+}
+
+.car-card__action-button {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.car-card__action-button--price {
+    background-color: #fff;
+    border: 1px solid #5dc0a6;
+    color: #5dc0a6;
+}
+
+.car-card__action-button--price:hover {
+    background-color: #5dc0a6;
+    color: #fff;
+}
+
+.car-card__action-button:not(.car-card__action-button--price) {
+    background-color: #5dc0a6;
+    color: #fff;
+}
+
+.car-card__action-button:not(.car-card__action-button--price):hover {
+    background-color: #4ca68c;
+}
+
+.car-card__color-selector {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.car-card__color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    transition: transform 0.3s;
+}
+
+.car-card__color:hover {
+    transform: scale(1.2);
+    border-color: #5dc0a6;
+}
