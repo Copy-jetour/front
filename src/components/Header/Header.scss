@@ -1,38 +1,34 @@
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
 
-  &__logos {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #ffffff;
+  }
+
+  &__logo {
     display: flex;
     align-items: center;
 
-    .logo {
-      height: 40px;
+    &-image {
+      height: 40px; // Высота логотипа Jetour
       margin-right: 10px;
-
-      &.jetour {
-        margin-right: 15px;
-      }
     }
-  }
 
-  &__menu {
-    display: flex;
-    gap: 20px;
-
-    a {
-      text-decoration: none;
+    &-divider {
+      font-size: 24px;
       color: #333;
-      font-size: 14px;
-      font-weight: bold;
+      margin: 0 10px;
+    }
 
-      &:hover {
-        color: #007bff;
-      }
+    &-rolf-logo {
+      height: 20px; // Высота логотипа Рольф
     }
   }
 
@@ -40,23 +36,55 @@
     display: flex;
     align-items: center;
 
-    &__phone {
-      margin-right: 15px;
-      font-size: 14px;
+    &-phone {
+      font-size: 16px;
       color: #333;
-    }
-
-    &__button {
-      padding: 8px 16px;
-      background-color: #28a745;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 14px;
+      text-decoration: none;
+      margin-right: 20px;
 
       &:hover {
-        background-color: #218838;
+        color: #f14c4c;
+      }
+    }
+
+    &-callback-button {
+      background-color: #5dc0a6;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #4ca68c;
+      }
+    }
+  }
+
+  &__nav {
+    background-color: #4a4a4a;
+
+    &-list {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    &-link {
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 15px 20px;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #333;
       }
     }
   }
