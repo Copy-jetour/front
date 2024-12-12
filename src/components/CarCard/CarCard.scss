@@ -28,7 +28,7 @@
     position: absolute;
     top: 15px;
     left: 15px;
-    background-color: #5dc0a6;
+    background-color: #4CAA93;
     color: #fff;
     font-size: 14px;
     font-weight: bold;
@@ -70,7 +70,7 @@
 
 .car-card__offer span {
     font-size: 20px;
-    color: #5dc0a6;
+    color: #4CAA93;
     margin-right: 10px;
 }
 
@@ -89,22 +89,22 @@
 
 .car-card__action-button--price {
     background-color: #fff;
-    border: 1px solid #5dc0a6;
-    color: #5dc0a6;
+    border: 1px solid #4CAA93;
+    color: #4CAA93;
 }
 
 .car-card__action-button--price:hover {
-    background-color: #5dc0a6;
+    background-color: #4CAA93;
     color: #fff;
 }
 
 .car-card__action-button:not(.car-card__action-button--price) {
-    background-color: #5dc0a6;
+    background-color: #4CAA93;
     color: #fff;
 }
 
 .car-card__action-button:not(.car-card__action-button--price):hover {
-    background-color: #4ca68c;
+    background-color: #459780;
 }
 
 .car-card__color-selector {
@@ -125,5 +125,5 @@
 
 .car-card__color:hover {
     transform: scale(1.2);
-    border-color: #5dc0a6;
+    border-color: #4CAA93;
 }

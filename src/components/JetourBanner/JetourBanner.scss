@@ -1,0 +1,147 @@
+.jetour-banner {
+    width: 100%;
+    height: 75vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.jetour-banner__container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.jetour-banner__image {
+    flex: 0 0 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.jetour-banner__image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.jetour-banner__dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.jetour-banner__dot {
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.jetour-banner__dot.active {
+    border-color: #fff;
+    background: transparent;
+}
+
+
+.jetour-banner__buttons button {
+    padding: 0.75rem 1.5rem;
+    background: #00a86b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.jetour-banner__buttons button:hover {
+    background: #007a4f;
+}
+
+
+.jetour-banner__content {
+    background-color: #00000080;
+    border: 1px solid #dadada;
+    padding: 40px 66px;
+    border-radius: 25px;
+    width: fit-content;
+    backdrop-filter: blur(1px);
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+.jetour-banner__content h1 {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+}
+
+.block-main {
+    display: flex;
+    flex-direction: column;
+    width: fit-content !important;
+    backdrop-filter: blur(1px);
+    font-weight: 700;
+    text-align: center;
+    height: fit-content !important;
+    width: 60% !important;
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    border-radius: calc(.0131578947* 100vw + 6.5789473684px);
+}
+
+
+.block-main__titles {
+    background-color: #00000080;
+    border: 1px solid #dadada;
+    width: fit-content !important;
+    backdrop-filter: blur(1px);
+    font-weight: 700;
+    text-align: center;
+    height: fit-content;
+    color: #fff !important;
+    pointer-events: none;
+    padding: 2% 5%;
+    border-radius: calc(.0131578947* 100vw + 6.5789473684px);
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+.block-main__title, .block-main__subtitle {
+    font-size: 40px;
+    color: #fff !important;
+}
+
+.block-main__title {
+    margin-top: 2%;
+    line-height: 1.1;
+}
+
+.bunner-button {
+    margin-right: 2%;
+    margin-top: 2%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    user-select: none; /* Отключение выделения изображения */
+    pointer-events: none; /* Предотвращает нежелательные клики на изображение */
+}

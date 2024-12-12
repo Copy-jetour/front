@@ -19,22 +19,22 @@
 }
 
 .header__logo-image {
-  height: 50px; /* Увеличенный логотип Jetour */
-  margin-right: 10px;
+  height: 25px; /* Увеличенный логотип Jetour */
+  margin-right: 5px;
 }
 
 .header__divider {
-  font-size: 50px; /* Увеличенный разделитель */
+  font-size: 25px; /* Увеличенный разделитель */
   color: #333;
   margin: 0 20px;
 }
 
 .header__rolf-logo {
-  height: 50px; /* Увеличенный логотип Рольф */
+  height: 25px; /* Увеличенный логотип Рольф */
 }
 
 .header__jetour-logo {
-  height: 50px; /* Увеличенный логотип Рольф */
+  height: 25px; /* Увеличенный логотип Рольф */
 }
 
 .header__contact {
@@ -54,18 +54,35 @@
 }
 
 .header__callback-button {
-  background-color: #5dc0a6;
+  background-color: #4CAA93;
   color: #fff;
   border: none;
   border-radius: 10px; /* Больше скругление кнопки */
-  padding: 10px 25px; /* Увеличенные отступы */
-  font-size: 16px; /* Увеличенный шрифт кнопки */
+  padding: 13px 39px; /* Увеличенные отступы */
+  font-weight: bold;
+  font-size: 18px; /* Увеличенный шрифт кнопки */
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .header__callback-button:hover {
-  background-color: #4ca68c;
+  background-color: #3d8875;
+}
+
+.bunner__callback-button {
+  background-color: #fff;
+  color: #4d4d4d;
+  border: none;
+  border-radius: 10px; /* Больше скругление кнопки */
+  padding: 13px 39px; /* Увеличенные отступы */
+  font-weight: bold;
+  font-size: 18px; /* Увеличенный шрифт кнопки */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.bunner__callback-button:hover {
+  background-color: #e0e0e0;
 }
 
 .header__nav {
@@ -78,6 +95,7 @@
   list-style: none;
   margin: 0;
   padding: 17px 20px;
+  background-color: #484D55;
 }
 
 .header__nav-link {
@@ -88,8 +106,4 @@
   text-decoration: none;
   transition: background-color 0.3s;
   padding: 20px 25px;
-}
-
-.header__nav-link:hover {
-  background-color: #333;
 }
