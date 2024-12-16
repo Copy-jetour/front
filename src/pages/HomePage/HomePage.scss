@@ -1,20 +1,29 @@
 .homepage {
   background-color: #efefef;
-  padding-top: 40px;
+  padding: 120px 0;
+}
 
-  h1 {
-    font-size: 32px;
-    color: #0d1238;
-    margin-bottom: 30px;
+@media (max-width: 1500px) {
+  .homepage {
+    padding: calc(.0813953488* 100vw + -2.0930232558px) 0;
   }
+}
 
-  &__cars {
-    display: flex;
-    flex-direction: column; /* Расположение в столбец */
-    align-items: center; /* Горизонтальное центрирование */
-    justify-content: center; /* Вертикальное центрирование */
-    min-height: 100vh; /* Высота контейнера - вся высота экрана */
-    gap: 20px; /* Отступы между карточками */
-    background-color: #f9f9f9; /* Цвет фона (если нужно) */
+@media (max-width: 1500px) {
+  .homepage .homepage__cars {
+      gap: calc(.0465116279* 100vw + .2325581395px);
   }
+}
+
+.homepage .homepage__cars {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.homepage__cars {
+  width: 100%;
+  max-width: 1620px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
