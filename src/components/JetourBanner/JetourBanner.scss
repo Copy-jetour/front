@@ -122,6 +122,7 @@ div {
 .container {
     display: flex;
     flex-wrap: wrap-reverse;
+    align-items: left;
 }
 
 .block-main__title, .block-main__subtitle {
