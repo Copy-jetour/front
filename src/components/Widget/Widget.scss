@@ -1,0 +1,204 @@
+.widget {
+    padding: 120px 0;
+}
+
+.widget-header {
+    background-color: #8a8a8a33;
+    border-radius: 55px;
+    position: relative;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.widget-header h1 {
+    font-size: 28px; /* Увеличиваем шрифт заголовка */
+    margin-bottom: 20px;
+}
+
+.timerer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.time-box {
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 15px 20px; /* Увеличиваем размеры таймера */
+    text-align: center;
+}
+
+.time-box span {
+    display: block;
+    font-size: 14px; /* Увеличиваем шрифт текста */
+    color: #666666;
+    line-height: 2.5;
+}
+
+.fix-benefit {
+    background: #4caf50;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px; /* Увеличиваем размеры кнопки */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Увеличиваем шрифт кнопки */
+
+    line-height: 1.6;
+}
+
+.fix-benefit:hover {
+    background: #45a049;
+}
+
+.widget-body {
+    display: flex;
+    flex-direction: column; /* Меняем расположение контента */
+    align-items: center;
+    margin-top: 30px;
+}
+
+.text-content p {
+    margin: 10px 0;
+    font-size: 18px; /* Увеличиваем текст */
+    color: #333333;
+}
+
+.credit-info {
+    background: #4caf50;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: left;
+    line-height: 1.4;
+}
+
+.credit-rate {
+    font-size: 40px;
+    padding: 26px 45px;
+    width: 610px;
+    background: linear-gradient(90deg, rgba(76, 170, 147, .8) 0%, rgba(32, 125, 102, 0) 100%);
+    border-radius: 20px 0 0 20px;
+}
+
+.credit-details {
+    font-size: 27px;
+    font-weight: 300;
+    margin-top: 20px;
+    margin-left: 45px;
+    line-height: 1.45;
+}
+
+.car-image img {
+    max-width: 100%; /* Заставляем изображение занимать всю ширину */
+    border-radius: 30px;
+    height: fit-content;
+}
+
+.block-offer {
+    background-image: url(../../assets/images/car-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right center;
+    border-radius: 55px;
+    padding: 55px 60px;
+    margin-top: -80px;
+    position: relative;
+    height: 537px;
+    color: #fff;
+}
+
+.block-offer__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container_time {
+    width: 100%;
+    max-width: 1620px;
+    margin: 0 auto;
+    padding: 0 20px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    touch-action: manipulation;
+}
+
+.block-clock__title {
+    font-size: 44px;
+    text-transform: uppercase;
+}
+
+.block-clock__icon {
+    background-color: #4caa93;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 90px;
+    height: 90px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Анимация пульсации для изображения */
+.block-clock__icon img {
+    animation: pulse-animation 1s infinite; /* Применение анимации */
+    user-select: none;
+    width: 70px;
+    height: 70px;
+}
+
+/* Ключевые кадры для анимации */
+@keyframes pulse-animation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); /* Увеличение на 20% */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.block-clock__btn {
+    width: 400px;
+    height: 60px;
+    font-size: 22px;
+    margin-bottom: 100px;
+}
+
+.block-clock__btn:hover {
+    background-color: #3c8572;
+}
+
+.base-button--primary {
+    border-color: transparent;
+    color: #fff;
+    background-color: #4caa93;
+}
+.base-button--bordered {
+    border: 1px solid transparent;
+}
+.base-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    font-weight: 700;
+    outline: none;
+    box-sizing: border-box;
+    text-transform: none;
+    border-radius: 10px;
+    transition: all .2s ease;
+    padding: 1em 2em;
+    cursor: pointer;
+}
