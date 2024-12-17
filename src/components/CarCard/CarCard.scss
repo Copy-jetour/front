@@ -1,26 +1,3 @@
-/* Utility Classes */
-.u-flex {
-    display: flex;
-    align-items: center;
-}
-
-.u-absolute {
-    position: absolute;
-}
-
-.u-center {
-    justify-content: center;
-}
-
-.u-padding {
-    padding: 18px 65px;
-}
-
-.u-border-radius {
-    border-radius: 16px;
-}
-
-/* General Styles */
 img {
     width: auto;
     -webkit-user-select: none;
@@ -61,7 +38,6 @@ button-prev.swiper-button-disabled {
     width: 100%;
     min-height: 100%;
     object-fit: cover;
-    border-radius: 50px;
 }
 
 .car__car-of-the-year {
@@ -110,8 +86,12 @@ button-prev.swiper-button-disabled {
     height: 100%;
     position: relative !important;
     transition-property: transform;
-    display: block;
-    unicode-bidi: isolate;
+}
+
+.car__swiper {
+    border-radius: 50px;
+    width: 860px;
+    height: 100%
 }
 
 .swiper-button-next, .swiper-button-prev {
@@ -128,8 +108,8 @@ button-prev.swiper-button-disabled {
 /* Car Modes */
 .car__modes {
     position: absolute;
-    bottom: 30px;
-    left: 40px;
+    bottom: 5%;
+    left: 5%;
     background-color: #ffffff80;
     display: flex;
     border-radius: 35px;
@@ -149,7 +129,7 @@ button-prev.swiper-button-disabled {
 .car__mode--active:before {
     content: "";
     position: absolute;
-    width: 100%;
+    width: 55%;
     height: 100%;
     background-color: #fff;
     animation: activeMode-438ad11b .3s ease-in-out forwards;
@@ -198,7 +178,7 @@ button-prev.swiper-button-disabled {
     border-radius: 0 50px 50px 0;
     max-width: 100%;
     min-width: 35%;
-    margin-left: -50px;
+    margin-left: -60px;
     padding: 30px 100px;
     display: flex;
     flex-direction: column;
@@ -296,8 +276,180 @@ button-prev.swiper-button-disabled {
     }
 
     .car__info {
-        margin-left: calc(-0.0291 * 100vw - 6.395px);
-        padding: calc(0.0291 * 100vw - 3.605px) calc(0.0814 * 100vw - 22.093px);
-        gap: calc(0.0174 * 100vw + 3.837px);
+        padding: calc(.0290697674* 100vw + -3.6046511628px) calc(.0813953488* 100vw + -22.0930232558px);
+        gap: calc(.0174418605* 100vw + 3.8372093023px);
     }
 }
+
+@media (max-width: 640px) {
+    .car {
+        padding-top:15px;
+        flex-direction: column
+    }
+
+    .car__car-of-the-year {
+        position: absolute;
+        width: 30%
+    }
+
+    .car__swiper {
+        width: 100%;
+        border-radius: calc(4.6875vw + 5px)
+    }
+
+    .car__benefit {
+        padding: 8px 30px;
+        font-size: 14px;
+        border-radius: 8px
+    }
+
+    .car__modes {
+        bottom: 15px;
+        left: 15px
+    }
+
+    .car__modes img {
+        width: 20px
+    }
+
+    .car__mode {
+        padding: 0 10px;
+        height: 30px
+    }
+
+    .car__info {
+        margin-left: 0;
+        align-content: center;
+        border-radius: 0 0 calc(4.6875vw + 5px) calc(4.6875vw + 5px);
+        margin-top: calc(-4.6875vw - 5px);
+        padding: 26px 20px;
+        padding-top: calc(25px + 4.6875vw) !important;
+        text-align: center;
+        align-items: center;
+        gap: 20px
+    }
+
+    .car__title {
+        order: 2;
+        font-size: 30px
+    }
+
+    .car__advantages {
+        order: 3;
+        row-gap: 8px;
+        column-gap: 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: start
+    }
+
+    .car__advantage {
+        width: calc(50% - 5px);
+        gap: 7px;
+        font-size: 12px
+    }
+
+    .car__advantage img {
+        width: 14px
+    }
+
+    .car__btns {
+        order: 4;
+        gap: 12px
+    }
+
+    .car__btn {
+        height: 50px;
+        font-size: 18px;
+        border-radius: 10px;
+        width: 100%
+    }
+}
+
+
+@media (max-width: 1500px) {
+    .car {
+        padding-top:calc(.0174418605 * 100vw + 3.8372093023px)
+    }
+
+    .car__swiper {
+        border-radius: calc(.0290697674 * 100vw + 6.3953488372px);
+        height: 100%;
+    }
+
+    .car__benefit {
+        padding: calc(.0093023256 * 100vw + 4.0465116279px) calc(.0406976744 * 100vw + 3.9534883721px);
+        font-size: calc(.0151162791 * 100vw + 10.3255813953px);
+        border-radius: calc(.0069767442 * 100vw + 5.5348837209px)
+    }
+
+    .car__modes {
+        bottom: calc(.0174418605 * 100vw + 3.8372093023px);
+        left: calc(.0290697674 * 100vw + -3.6046511628px);
+        border-radius: calc(.0174418605 * 100vw + 8.8372093023px)
+    }
+
+    .car__modes img {
+        width: calc(.023255814 * 100vw + 5.1162790698px)
+    }
+
+    .car__mode {
+        padding: 0 calc(.011627907 * 100vw + 2.5581395349px);
+        height: calc(.0406976744 * 100vw + 3.9534883721px)
+    }
+
+    .car__mode--active:before {
+        border-radius: calc(.0174418605 * 100vw + 8.8372093023px)
+    }
+
+    .car__colors {
+        gap: calc(.0093023256 * 100vw + 1.0465116279px);
+        padding: calc(.011627907 * 100vw + 2.5581395349px) calc(.0174418605 * 100vw + 3.8372093023px) calc(.0058139535 * 100vw + 1.2790697674px);
+        border-radius: calc(.011627907 * 100vw + 2.5581395349px) calc(.011627907 * 100vw + 2.5581395349px) 0 0
+    }
+
+    .car__color {
+        width: calc(.0139534884 * 100vw + 4.0697674419px);
+        height: calc(.0139534884 * 100vw + 4.0697674419px);
+        border-radius: calc(.0023255814 * 100vw + .511627907px)
+    }
+
+    .car__color--active:before {
+        width: calc(.0197674419 * 100vw + 5.3488372093px);
+        height: calc(.0197674419 * 100vw + 5.3488372093px);
+        border-radius: calc(.0034883721 * 100vw + 1.7674418605px)
+    }
+
+    .car__info {
+        padding: calc(.0290697674 * 100vw + -3.6046511628px) calc(.0813953488 * 100vw + -22.0930232558px);
+        gap: calc(.0174418605 * 100vw + 3.8372093023px)
+    }
+
+    .car__title {
+        font-size: calc(.0430232558 * 100vw + -9.5348837209px)
+    }
+
+    .car__advantages {
+        gap: calc(.0197674419 * 100vw + -5.6511627907px)
+    }
+
+    .car__advantage {
+        gap: calc(.011627907 * 100vw + 10.5581395349px);
+        font-size: calc(.0127906977 * 100vw + 3.8139534884px)
+    }
+
+    .car__advantage img {
+        width: calc(.0174418605 * 100vw + 8.8372093023px)
+    }
+
+    .car__btns {
+        gap: calc(.011627907 * 100vw + 2.5581395349px)
+    }
+
+    .car__btn {
+        height: calc(.0465116279 * 100vw + .2325581395px);
+        font-size: calc(.0139534884 * 100vw + 5.0697674419px);
+        border-radius: calc(.0046511628 * 100vw + 7.023255814px)
+    }
+}
+

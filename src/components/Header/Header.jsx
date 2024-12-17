@@ -24,15 +24,15 @@ const Header = () => {
                 </div>
             </div>
             <nav className="header__nav">
-                <ul className="header__nav-list">
-                    <li><a href="#" className="header__nav-link">JETOUR DASHING</a></li>
-                    <li><a href="#" className="header__nav-link">JETOUR X90PLUS</a></li>
-                    <li><a href="#" className="header__nav-link">JETOUR X70PLUS</a></li>
-                    <li><a href="#" className="header__nav-link">JETOUR T2</a></li>
-                    <li><a href="#" className="header__nav-link">JETOUR X50</a></li>
-                    <li><a href="#" className="header__nav-link">КРЕДИТ</a></li>
-                    <li><a href="#" className="header__nav-link">КОНТАКТЫ</a></li>
-                </ul>
+                <div className="header__nav-list">
+                    <div><a href="#" className="header__nav-link">JETOUR DASHING</a></div>
+                    <div><a href="#" className="header__nav-link">JETOUR X90PLUS</a></div>
+                    <div><a href="#" className="header__nav-link">JETOUR X70PLUS</a></div>
+                    <div><a href="#" className="header__nav-link">JETOUR T2</a></div>
+                    <div><a href="#" className="header__nav-link">JETOUR X50</a></div>
+                    <div><a href="#" className="header__nav-link">КРЕДИТ</a></div>
+                    <div><a href="#" className="header__nav-link">КОНТАКТЫ</a></div>
+                </div>
             </nav>
         </header>
     );
