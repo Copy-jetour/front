@@ -14,10 +14,10 @@ const cars = [
             white: 'https://jetour-rolf.ru/assets/1-7474dc66.jpg',
             grey: 'https://jetour-rolf.ru/assets/1-c9eab1c3.jpg',
             blue: 'https://jetour-rolf.ru/assets/1-9f6429b0.jpg',
-            milk: 'https://jetour-rolf.ru/assets/1-7ec987a9.jpg'
+            light_grey: 'https://jetour-rolf.ru/assets/1-7ec987a9.jpg'
         },
         salon: {
-            milk: 'https://jetour-rolf.ru/assets/1-7baa38a7.jpg',
+            light_grey: 'https://jetour-rolf.ru/assets/1-7baa38a7.jpg',
             grey: 'https://jetour-rolf.ru/assets/1-4c016462.jpg'
         }
     },
@@ -36,23 +36,55 @@ const cars = [
         }
     },
     {
-        model: 'SMYH',
-        discount: '620 000₽',
-        image: 'https://jetour-rolf.ru/assets/1-3c8d527c.jpg',
+        model: 'X70PLUS',
+        discount: '520 000₽',
         offers: ['Кредит от 0,01%', 'Допы в подарок', 'До выгода за трейд-ин', 'Каско в подарок'],
         car: {
-            dark_blue: 'https://jetour-rolf.ru/assets/1-9f4636fc.jpg',
-            red: '',
-            grey: 'https://jetour-rolf.ru/assets/1-f2ec0f69.jpg',
-            white: 'https://jetour-rolf.ru/assets/1-47038492.jpg',
-            milk: '',
-            blue: '',
-            black: 'https://jetour-rolf.ru/assets/1-13b8e506.jpg',
-            green: ''
+            dark_blue: 'https://jetour-rolf.ru/assets/1-3c8d527c.jpg',
+            red: 'https://jetour-rolf.ru/assets/1-a98d4795.jpg',
+            grey: 'https://jetour-rolf.ru/assets/1-2600b21a.jpg',
+            white: 'https://jetour-rolf.ru/assets/1-882e4329.jpg',
+            light_grey: 'https://jetour-rolf.ru/assets/1-1bf4ebdd.jpg',
+            blue: 'https://jetour-rolf.ru/assets/1-babc5953.jpg',
+            black: 'https://jetour-rolf.ru/assets/1-4322d581.jpg',
+            green: 'https://jetour-rolf.ru/assets/1-b9a733c6.jpg'
         },
         salon: {
-            black: 'https://jetour-rolf.ru/assets/1-fb0e707a.jpg',
-            yellow: ''
+            black: 'https://jetour-rolf.ru/assets/1-98baeb99.jpg',
+            yellow: 'https://jetour-rolf.ru/assets/1-55cf2e1b.jpg'
+        }
+    },
+    {
+        model: 'T2',
+        discount: '320 000₽',
+        offers: ['Кредит от 0,01%', 'Допы в подарок', 'До выгода за трейд-ин', 'Каско в подарок'],
+        car: {
+            milk: 'https://jetour-rolf.ru/assets/1-17ee857b.jpg',
+            black: 'https://jetour-rolf.ru/assets/1-b6d286c1.jpg',
+            blue: 'https://jetour-rolf.ru/assets/1-e3becb09.jpg',
+            blue: 'https://jetour-rolf.ru/assets/1-0040a6c0.jpg',
+            grey: 'https://jetour-rolf.ru/assets/1-f659787e.jpg',
+            white: 'https://jetour-rolf.ru/assets/1-c58bd682.jpg',
+        },
+        salon: {
+            yellow: 'https://jetour-rolf.ru/assets/1-4703a2ac.jpg',
+            black: 'https://jetour-rolf.ru/assets/1-98baeb99.jpg',
+        }
+    },
+    {
+        model: 'X50',
+        discount: 'Уже в продаже',
+        offers: [],
+        car: {
+            black: 'https://jetour-rolf.ru/assets/1-776a002c.jpg',
+            grey: 'https://jetour-rolf.ru/assets/1-2da88321.jpg',
+            light_grey: 'https://jetour-rolf.ru/assets/1-1fdc92be.jpg',
+            white: 'https://jetour-rolf.ru/assets/1-5576b28e.jpg',
+            light_grey: 'https://jetour-rolf.ru/assets/1-b05520e0.jpg',
+        },
+        salon: {
+            black: 'https://jetour-rolf.ru/assets/1-2705e6fb.jpgg',
+            dark_blue: 'https://jetour-rolf.ru/assets/1-34e9249e.jpg'
         }
     },
 ];

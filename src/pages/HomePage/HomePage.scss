@@ -27,3 +27,33 @@
   margin: 0 auto;
   padding: 0 20px;
 }
+
+@media (max-width: 640px) {
+  .homepage .homepage__cars {
+      padding: 0 15px;
+      gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .homepage {
+      padding: 60px 0;
+  }
+}
+
+@media (max-width: 1500px) {
+  .homepage {
+      padding: calc(.0813953488* 100vw + -2.0930232558px) 0;
+  }
+}
+.homepage {
+  background-color: #efefef;
+  padding: 120px 0;
+}
+
+
+@media (max-width: 640px) {
+  .homepage__cars {
+      padding: 0 10px;
+  }
+}

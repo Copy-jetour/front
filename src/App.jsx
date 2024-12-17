@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage/HomePage.jsx';
 import JetourBanner from './components/JetourBanner/JetourBanner.jsx';
 import Widget from './components/Widget/Widget.jsx';
 import './styles/main.scss';
+//import './styles/index_style.css';
 
 function App() {
   return (
@@ -15,7 +16,6 @@ function App() {
         <Widget />
         <HomePage />
       </main>
-      <Footer />
     </div>
   );
 }
