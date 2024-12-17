@@ -17,7 +17,7 @@ function getGradient(color) {
     return colors[color];
 }
 
-const CarCard = ({ model, discount, car, salon, offers }) => {
+const CarCard = ({ model, discount, car, salon, offers, rate }) => {
     const [selectedColor, setSelectedColor] = useState(Object.keys(car)[0]); // Первый цвет по умолчанию
     const [mode, setMode] = useState('exterior'); // Текущий режим: 'exterior' или 'interior'
 
@@ -35,7 +35,7 @@ const CarCard = ({ model, discount, car, salon, offers }) => {
     return (
         <div className="car">
             <div className="car-image-wrapper">
-                <img className="car__car-of-the-year" src="https://jetour-rolf.ru/assets/carofyear-7fd9270d.png" alt="" />
+                <img className="car__car-of-the-year" src={rate} alt="" />
                 <div className="car__benefit">Выгода до {discount}</div>
                 <div className="swiper swiper-initialized swiper-horizontal swiper-pointer-events car__swiper">
                     <div className="swiper-button-prev swiper-button-disabled"></div>

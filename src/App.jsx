@@ -4,6 +4,7 @@ import Footer from './components/Footer/Footer.jsx';
 import HomePage from './pages/HomePage/HomePage.jsx';
 import JetourBanner from './components/JetourBanner/JetourBanner.jsx';
 import Widget from './components/Widget/Widget.jsx';
+import CreditWidget from './components/CreditWidget/CreditWidget.jsx';
 import './styles/main.scss';
 //import './styles/index_style.css';
 
@@ -15,6 +16,8 @@ function App() {
         <JetourBanner />
         <Widget />
         <HomePage />
+        <CreditWidget />
+        <Footer />
       </main>
     </div>
   );
