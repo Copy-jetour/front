@@ -1,0 +1,74 @@
+/* General Container */
+.widget-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-image: url(../../assets/images/credit-b6d204d3.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    margin-bottom: 1%;
+    border-radius: 50px;
+  }
+
+  /* Widget Content Styling */
+  .widget-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+    margin-right: 50px;
+    max-width: 400px;
+  }
+
+  .widget-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.3;
+  }
+
+  /* Form Styles */
+  .widget-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .phone-input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+  }
+
+  .agreement {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  .agreement a {
+    color: #00bfff;
+    text-decoration: underline;
+  }
+
+  .submit-button {
+    background-color: #ccc;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .submit-button:hover {
+    background-color: #ddd;
+  }
