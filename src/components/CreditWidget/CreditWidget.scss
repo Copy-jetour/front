@@ -1,45 +1,69 @@
-/* General Container */
 .widget-container {
     position: relative;
     width: 100%;
-    height: 400px;
-    background-image: url(../../assets/images/credit-b6d204d3.jpg);
+    background-image: url(../../assets/images/credit-b6d204d3.jpg); /* Путь к вашему изображению */
     background-size: cover;
-    background-position: center;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     color: white;
     font-family: Arial, sans-serif;
     overflow: hidden;
-    margin-bottom: 1%;
-    border-radius: 50px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    height: 30.3125vw;
+    max-height: 582px;
   }
 
-  /* Widget Content Styling */
+  /* Контент */
   .widget-content {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 30px;
-    border-radius: 10px;
-    margin-right: 50px;
-    max-width: 400px;
-  }
-
+    top: 10%;
+    position: relative;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 1620px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+  /* Заголовок */
   .widget-title {
-    font-size: 28px;
+    font-size: 40px;
     font-weight: bold;
     margin-bottom: 20px;
     line-height: 1.3;
+
   }
 
-  /* Form Styles */
-  .widget-form {
+@media (max-width: 1200px) {
+    .widget-title {
+        font-size: calc(.0357142857* 100vw + -2.8571428571px);
+    }
+}
+
+  /* Горизонтальная форма */
+  .widget-form-horizontal {
     display: flex;
     flex-direction: column;
     gap: 15px;
   }
 
+  /* Группа для поля ввода */
+  .input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .phone-label {
+    white-space: nowrap;
+    font-size: 16px;
+  }
+
   .phone-input {
+    flex: 1; /* Растягиваем поле ввода */
     padding: 10px;
     font-size: 16px;
     border: none;
@@ -47,11 +71,19 @@
     outline: none;
   }
 
-  .agreement {
+  /* Группа для соглашения и кнопки */
+  .submit-group {
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .agreement {
     font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
   }
 
   .agreement a {
@@ -67,8 +99,397 @@
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+    white-space: nowrap;
   }
 
   .submit-button:hover {
     background-color: #ddd;
   }
+
+
+  .form--horizontal .form__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 0 15px
+}
+
+.form--horizontal .form__input {
+    width: 100%
+}
+
+.form--horizontal .form__btn {
+    width: 100%;
+    margin: 0
+}
+
+.form__btn {
+    margin-top: 15px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 600
+}
+
+.form__agreement {
+    font-size: 12px;
+    margin-top: 10px
+}
+
+.form__agreement-link {
+    text-decoration: underline;
+    color: #4caa93;
+}
+
+@media (max-width: 640px) {
+    .form__btn {
+        height:40px;
+        font-size: 16px
+    }
+}
+
+
+.block-credit__form {
+    width: 40%;
+    margin-top: 50px
+}
+
+@media (max-width: 1200px) {
+    .block-credit {
+        height:48.5vw
+    }
+
+    .block-credit__title {
+        font-size: calc(.0357142857 * 100vw + -2.8571428571px)
+    }
+
+    .block-credit__form {
+        margin-top: calc(.0446428571 * 100vw + -3.5714285714px)
+    }
+}
+
+@media (max-width: 640px) {
+    .block-credit {
+        background-image:url(../../assets/images/credit_m-f5ab3114.png);
+        background-size: contain;
+        background-position: bottom;
+        background-color: #000;
+        height: auto;
+        top: 0;
+        border-radius: 20px
+    }
+
+    .block-credit .container {
+        top: 0;
+        transform: none;
+        padding: 50px 15px 255px;
+        align-items: center
+    }
+
+    .block-credit__title {
+        font-size: calc(1.25vw + 16px)
+    }
+
+    .block-credit__form {
+        width: 100%;
+        max-width: 300px;
+        margin: 20px auto 0
+    }
+}
+
+.basel-input {
+    width: 100%;
+    box-sizing: border-box
+}
+
+.basel-input--horizontal {
+    display: flex;
+    align-items: center
+}
+
+.basel-input--horizontal .a-input__label {
+    margin: 0 10px 0 0
+}
+
+.basel-input--horizontal .a-input__container {
+    flex-grow: 1
+}
+
+.basel-input__label {
+    display: block;
+    font-family: inherit;
+    padding: 3px 5px;
+    font-size: 12px;
+    font-weight: 500;
+    color: inherit;
+    white-space: nowrap
+}
+
+.basel-input__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid rgba(0,0,0,.8);
+    border-color: inherit;
+    background-color: transparent;
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1),box-shadow .2s cubic-bezier(.645,.045,.355,1)
+}
+
+.basel-input__container--focused {
+    border-color: #4caa93
+}
+
+.basel-input__container--disabled {
+    background-color: #f5f5f5
+}
+
+.basel-input__container--error {
+    border-color: #ff4d4f
+}
+
+.basel-input__field {
+    flex: 1;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 400;
+    color: inherit;
+    background: transparent;
+    padding: 10px;
+    outline: none;
+    border: none;
+    color: #bfbfbf !important;
+}
+
+.basel-input__field::placeholder {
+    color: #bfbfbf !important;
+    font-size: 18px;
+    font-weight: 300
+}
+
+.basel-input__prepend {
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    color: #bfbfbf;
+    height: 100%
+}
+
+.basel-input__append {
+    display: flex;
+    align-items: center;
+    padding-right: 12px;
+    color: #bfbfbf;
+    height: 100%
+}
+
+.basel-checkbox {
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 100%
+}
+
+.basel-checkbox__label {
+    margin-left: 10px
+}
+
+.basel-checkbox__checkmark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    min-width: 16px;
+    min-height: 16px;
+    border: 2px solid rgba(208, 208, 208, 0.5);
+    background-color: #fff;
+    border-radius: 3px;
+    transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.basel-checkbox__checkmark:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 8px;
+    width: 5px;
+    top: 2px;
+    left: 4px;
+    border: 2px solid #ffffff;
+    border-left: 0;
+    border-top: 0;
+    transition: transform 0.15s ease-in-out;
+    transform: rotate(45deg) scale(0);
+    opacity: 0;
+}
+
+.basel-checkbox__checkmark:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    transition: transform .15s ease-in-out;
+    height: 8px;
+    width: 8px;
+    background-color: #4caa93
+}
+
+.basel-checkbox__checkmark--indeterminate {
+    border-color: #d0d0d080;
+    background-color: #fff
+}
+
+.basel-checkbox__checkmark--indeterminate:after {
+    transform: translate(-50%,-50%) scale(1)
+}
+
+.basel-checkbox:hover:not(.basel-checkbox--disabled) .basel-checkbox__checkmark {
+    box-shadow: 0 0 1px #d0d0d080
+}
+
+.basel-checkbox input:checked + .basel-checkbox__checkmark {
+    border-color: #4caa93;
+    background-color: #4caa93;
+}
+
+.basel-checkbox input:checked + .basel-checkbox__checkmark:before {
+    transform: rotate(45deg) scale(1);
+    opacity: 1;
+}
+
+
+.basel-checkbox--disabled {
+    cursor: default;
+    filter: grayscale(1) opacity(.6)
+}
+
+.basel-checkbox--tabular {
+    padding: 6px 15px;
+    box-sizing: border-box;
+    justify-content: center
+}
+
+.basel-checkbox input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0
+}
+
+input[aria-checked=true]+.basel-checkbox__checkmark:before {
+    transform: rotate(45deg) scale(1)
+}
+
+input[aria-checked=true]+.basel-checkbox__checkmark {
+    border-color: #4caa93;
+    background-color: #4caa93
+}
+
+input[aria-invalid=true]+.basel-checkbox__checkmark {
+    border-color: #ff4d4f
+}
+
+input:focus+.basel-checkbox__checkmark {
+    border-color: #4caa93
+}
+
+input:hover+.basel-checkbox__checkmark {
+    border-color: #4caa93
+}
+
+.form--horizontal .form__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 0 15px
+}
+
+.form--horizontal .form__input {
+    width: 100%
+}
+
+.form--horizontal .form__btn {
+    width: 100%;
+    margin: 0
+}
+
+.form__btn {
+    margin-top: 15px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 600
+}
+
+@media (max-width: 640px) {
+    .form__btn {
+        height:40px;
+        font-size: 16px
+    }
+}
+
+
+.basel-button:disabled:not(.basel-button--text), .basel-button--disabled:not(.basel-button--text) {
+    border-color: transparent;
+    background-color: #d9d9d9;
+    color: #fff;
+    cursor: default;
+}
+.form__btn {
+    margin-top: 15px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.basel-button--primary:hover, .basel-button--primary:active {
+    color: #fff;
+    background-color: #4caa93;
+}
+.basel-button:hover, .basel-button:active {
+    color: #fff;
+    background-color: #408d7a;
+}
+.basel-button--primary {
+    border-color: transparent;
+    color: #fff;
+    background-color: #408d7a;
+}
+.basel-button--block {
+    width: 100%;
+}
+.basel-button--bordered {
+    border: 1px solid transparent;
+}
+.basel-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    font-family: inherit;
+    font-weight: 1000;
+    font-size: 18px;
+    outline: none;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #4caa93;
+    text-transform: none;
+    border-radius: 10px;
+    transition: all .2s ease;
+    padding: 1em 2em;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.form__input.valid {
+    color: #4caa93;
+}
