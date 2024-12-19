@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage/HomePage.jsx';
 import JetourBanner from './components/JetourBanner/JetourBanner.jsx';
 import Widget from './components/Widget/Widget.jsx';
 import CreditWidget from './components/CreditWidget/CreditWidget.jsx';
+import AdvantagesWidget from './components/AdvantagesWidget/AdvantagesWidget.jsx';
 import './styles/main.scss';
 //import './styles/index_style.css';
 
@@ -17,6 +18,7 @@ function App() {
         <Widget />
         <HomePage />
         <CreditWidget />
+        <AdvantagesWidget />
         <Footer />
       </main>
     </div>

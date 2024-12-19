@@ -1,0 +1,499 @@
+.decorator {
+    width: 10%;
+    height: 100% !important;
+    margin-right: 20px;
+}
+
+.container-adventages {
+    width: 100%;
+    max-width: 1620px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (max-width: 640px) {
+    .container-advantages {
+        padding:0 10px
+    }
+}
+
+.swiper-adventages {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1
+}
+
+.swiper-adventages-vertical>.swiper-adventages-wrapper {
+    flex-direction: column
+}
+
+.swiper-adventages-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.swiper-adventages-android .swiper-adventages-slide,.swiper-adventages-wrapper {
+    transform: translateZ(0)
+}
+
+.swiper-adventages-pointer-events {
+    touch-action: pan-y
+}
+
+.swiper-adventages-pointer-events.swiper-adventages-vertical {
+    touch-action: pan-x
+}
+
+.swiper-adventages-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform
+}
+
+.swiper-adventages-slide-invisible-blank {
+    visibility: hidden
+}
+
+.swiper-adventages-autoheight,.swiper-adventages-autoheight .swiper-adventages-slide {
+    height: auto
+}
+
+.swiper-adventages-autoheight .swiper-adventages-wrapper {
+    align-items: flex-start;
+    transition-property: transform,height
+}
+
+.swiper-adventages-3d,.swiper-adventages-3d.swiper-adventages-css-mode .swiper-adventages-wrapper {
+    perspective: 1200px
+}
+
+.swiper-adventages-3d .swiper-adventages-cube-shadow,.swiper-adventages-3d .swiper-adventages-slide,.swiper-adventages-3d .swiper-adventages-slide-shadow,.swiper-adventages-3d .swiper-adventages-slide-shadow-bottom,.swiper-adventages-3d .swiper-adventages-slide-shadow-left,.swiper-adventages-3d .swiper-adventages-slide-shadow-right,.swiper-adventages-3d .swiper-adventages-slide-shadow-top,.swiper-adventages-3d .swiper-adventages-wrapper {
+    transform-style: preserve-3d
+}
+
+.swiper-adventages-3d .swiper-adventages-slide-shadow,.swiper-adventages-3d .swiper-adventages-slide-shadow-bottom,.swiper-adventages-3d .swiper-adventages-slide-shadow-left,.swiper-adventages-3d .swiper-adventages-slide-shadow-right,.swiper-adventages-3d .swiper-adventages-slide-shadow-top {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10
+}
+
+.swiper-adventages-3d .swiper-adventages-slide-shadow {
+    background: rgba(0,0,0,.15)
+}
+
+.swiper-adventages-3d .swiper-adventages-slide-shadow-left {
+    background-image: linear-gradient(to left,rgba(0,0,0,.5),rgba(0,0,0,0))
+}
+
+.swiper-adventages-3d .swiper-adventages-slide-shadow-right {
+    background-image: linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,0))
+}
+
+.swiper-adventages-3d .swiper-adventages-slide-shadow-top {
+    background-image: linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,0))
+}
+
+.swiper-adventages-3d .swiper-adventages-slide-shadow-bottom {
+    background-image: linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0))
+}
+
+.swiper-adventages-css-mode>.swiper-adventages-wrapper {
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none
+}
+
+.swiper-adventages-css-mode>.swiper-adventages-wrapper::-webkit-scrollbar {
+    display: none
+}
+
+.swiper-adventages-css-mode>.swiper-adventages-wrapper>.swiper-adventages-slide {
+    scroll-snap-align: start start
+}
+
+.swiper-adventages-horizontal.swiper-adventages-css-mode>.swiper-adventages-wrapper {
+    scroll-snap-type: x mandatory
+}
+
+.swiper-adventages-vertical.swiper-adventages-css-mode>.swiper-adventages-wrapper {
+    scroll-snap-type: y mandatory
+}
+
+.swiper-adventages-centered>.swiper-adventages-wrapper:before {
+    content: "";
+    flex-shrink: 0;
+    order: 9999
+}
+
+.swiper-adventages-centered.swiper-adventages-horizontal>.swiper-adventages-wrapper>.swiper-adventages-slide:first-child {
+    margin-inline-start:var(--swiper-adventages-centered-offset-before)}
+
+.swiper-adventages-centered.swiper-adventages-horizontal>.swiper-adventages-wrapper:before {
+    height:100%;
+    min-height: 1px;
+    width: var(--swiper-adventages-centered-offset-after)
+}
+
+.swiper-adventages-centered.swiper-adventages-vertical>.swiper-adventages-wrapper>.swiper-adventages-slide:first-child {
+    margin-block-start:var(--swiper-adventages-centered-offset-before)}
+
+.swiper-adventages-centered.swiper-adventages-vertical>.swiper-adventages-wrapper:before {
+    width:100%;
+    min-width: 1px;
+    height: var(--swiper-adventages-centered-offset-after)
+}
+
+.swiper-adventages-centered>.swiper-adventages-wrapper>.swiper-adventages-slide {
+    scroll-snap-align: center center
+}
+
+.swiper-adventages-lazy-preloader {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -21px;
+    margin-top: -21px;
+    z-index: 10;
+    transform-origin: 50%;
+    animation: swiper-adventages-preloader-spin 1s infinite linear;
+    box-sizing: border-box;
+    border: 4px solid var(--swiper-adventages-preloader-color,var(--swiper-adventages-theme-color));
+    border-radius: 50%;
+    border-top-color: transparent
+}
+
+.swiper-adventages-lazy-preloader-white {
+    --swiper-adventages-preloader-color: #fff
+}
+
+.swiper-adventages-lazy-preloader-black {
+    --swiper-adventages-preloader-color: #000
+}
+
+@keyframes swiper-adventages-preloader-spin {
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.swiper-adventages-pagination {
+    position: absolute;
+    text-align: center;
+    transition: .3s opacity;
+    transform: translateZ(0);
+    z-index: 10
+}
+
+.swiper-adventages-pagination.swiper-adventages-pagination-hidden {
+    opacity: 0
+}
+
+.swiper-adventages-horizontal>.swiper-adventages-pagination-bullets,.swiper-adventages-pagination-bullets.swiper-adventages-pagination-horizontal,.swiper-adventages-pagination-custom,.swiper-adventages-pagination-fraction {
+    bottom: 10px;
+    left: 0;
+    width: 100%
+}
+
+.swiper-adventages-pagination-bullets-dynamic {
+    overflow: hidden;
+    font-size: 0
+}
+
+.swiper-adventages-pagination-bullets-dynamic .swiper-adventages-pagination-bullet {
+    transform: scale(.33);
+    position: relative
+}
+
+.swiper-adventages-pagination-bullets-dynamic .swiper-adventages-pagination-bullet-active,.swiper-adventages-pagination-bullets-dynamic .swiper-adventages-pagination-bullet-active-main {
+    transform: scale(1)
+}
+
+.swiper-adventages-pagination-bullets-dynamic .swiper-adventages-pagination-bullet-active-prev {
+    transform: scale(.66)
+}
+
+.swiper-adventages-pagination-bullets-dynamic .swiper-adventages-pagination-bullet-active-prev-prev {
+    transform: scale(.33)
+}
+
+.swiper-adventages-pagination-bullets-dynamic .swiper-adventages-pagination-bullet-active-next {
+    transform: scale(.66)
+}
+
+.swiper-adventages-pagination-bullets-dynamic .swiper-adventages-pagination-bullet-active-next-next {
+    transform: scale(.33)
+}
+
+.swiper-adventages-pagination-bullet {
+    width: var(--swiper-adventages-pagination-bullet-width,var(--swiper-adventages-pagination-bullet-size,8px));
+    height: var(--swiper-adventages-pagination-bullet-height,var(--swiper-adventages-pagination-bullet-size,8px));
+    display: inline-block;
+    border-radius: 50%;
+    background: var(--swiper-adventages-pagination-bullet-inactive-color,#000);
+    opacity: var(--swiper-adventages-pagination-bullet-inactive-opacity, .2)
+}
+
+button.swiper-adventages-pagination-bullet {
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    -webkit-appearance: none;
+    appearance: none
+}
+
+.swiper-adventages-pagination-clickable .swiper-adventages-pagination-bullet {
+    cursor: pointer
+}
+
+.swiper-adventages-pagination-bullet:only-child {
+    display: none!important
+}
+
+.swiper-adventages-pagination-bullet-active {
+    opacity: var(--swiper-adventages-pagination-bullet-opacity, 1);
+    background: var(--swiper-adventages-pagination-color,var(--swiper-adventages-theme-color))
+}
+
+.swiper-adventages-pagination-vertical.swiper-adventages-pagination-bullets,.swiper-adventages-vertical>.swiper-adventages-pagination-bullets {
+    right: 10px;
+    top: 50%;
+    transform: translate3d(0,-50%,0)
+}
+
+.swiper-adventages-pagination-vertical.swiper-adventages-pagination-bullets .swiper-adventages-pagination-bullet,.swiper-adventages-vertical>.swiper-adventages-pagination-bullets .swiper-adventages-pagination-bullet {
+    margin: var(--swiper-adventages-pagination-bullet-vertical-gap,6px) 0;
+    display: block
+}
+
+.swiper-adventages-pagination-vertical.swiper-adventages-pagination-bullets.swiper-adventages-pagination-bullets-dynamic,.swiper-adventages-vertical>.swiper-adventages-pagination-bullets.swiper-adventages-pagination-bullets-dynamic {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px
+}
+
+.swiper-adventages-pagination-vertical.swiper-adventages-pagination-bullets.swiper-adventages-pagination-bullets-dynamic .swiper-adventages-pagination-bullet,.swiper-adventages-vertical>.swiper-adventages-pagination-bullets.swiper-adventages-pagination-bullets-dynamic .swiper-adventages-pagination-bullet {
+    display: inline-block;
+    transition: .2s transform,.2s top
+}
+
+.swiper-adventages-horizontal>.swiper-adventages-pagination-bullets .swiper-adventages-pagination-bullet,.swiper-adventages-pagination-horizontal.swiper-adventages-pagination-bullets .swiper-adventages-pagination-bullet {
+    margin: 0 var(--swiper-adventages-pagination-bullet-horizontal-gap,4px)
+}
+
+.swiper-adventages-horizontal>.swiper-adventages-pagination-bullets.swiper-adventages-pagination-bullets-dynamic,.swiper-adventages-pagination-horizontal.swiper-adventages-pagination-bullets.swiper-adventages-pagination-bullets-dynamic {
+    left: 50%;
+    transform: translate(-50%);
+    white-space: nowrap
+}
+
+.swiper-adventages-horizontal>.swiper-adventages-pagination-bullets.swiper-adventages-pagination-bullets-dynamic .swiper-adventages-pagination-bullet,.swiper-adventages-pagination-horizontal.swiper-adventages-pagination-bullets.swiper-adventages-pagination-bullets-dynamic .swiper-adventages-pagination-bullet {
+    transition: .2s transform,.2s left
+}
+
+.swiper-adventages-horizontal.swiper-adventages-rtl>.swiper-adventages-pagination-bullets-dynamic .swiper-adventages-pagination-bullet {
+    transition: .2s transform,.2s right
+}
+
+.swiper-adventages-pagination-progressbar {
+    background: rgba(0,0,0,.25);
+    position: absolute
+}
+
+.swiper-adventages-pagination-progressbar .swiper-adventages-pagination-progressbar-fill {
+    background: var(--swiper-adventages-pagination-color,var(--swiper-adventages-theme-color));
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    transform-origin: left top
+}
+
+.swiper-adventages-rtl .swiper-adventages-pagination-progressbar .swiper-adventages-pagination-progressbar-fill {
+    transform-origin: right top
+}
+
+.swiper-adventages-horizontal>.swiper-adventages-pagination-progressbar,.swiper-adventages-pagination-progressbar.swiper-adventages-pagination-horizontal,.swiper-adventages-pagination-progressbar.swiper-adventages-pagination-vertical.swiper-adventages-pagination-progressbar-opposite,.swiper-adventages-vertical>.swiper-adventages-pagination-progressbar.swiper-adventages-pagination-progressbar-opposite {
+    width: 100%;
+    height: 4px;
+    left: 0;
+    top: 0
+}
+
+.swiper-adventages-horizontal>.swiper-adventages-pagination-progressbar.swiper-adventages-pagination-progressbar-opposite,.swiper-adventages-pagination-progressbar.swiper-adventages-pagination-horizontal.swiper-adventages-pagination-progressbar-opposite,.swiper-adventages-pagination-progressbar.swiper-adventages-pagination-vertical,.swiper-adventages-vertical>.swiper-adventages-pagination-progressbar {
+    width: 4px;
+    height: 100%;
+    left: 0;
+    top: 0
+}
+
+.swiper-adventages-pagination-lock {
+    display: none
+}
+
+[data-v-19e5924d]:root {
+    --swiper-adventages-theme-color: #4caa93
+}
+
+.advantages {
+    padding: 120px 0
+}
+
+.advantages__title {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 70px
+}
+
+.advantages__item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    cursor: pointer;
+    border: 2px solid rgba(0,0,0,.09);
+    flex: 1;
+    padding: 40px;
+    border-radius: 20px
+}
+
+.advantages__item p {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-block-start: 0 !important;
+    margin-block-end: 0 !important;
+}
+
+.advantages__icon {
+    background-color: #4caa93;
+    width: 110px;
+    height: 110px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.advantages__icon span {
+    color: #fff;
+    font-size: 60px
+}
+
+@media (max-width: 1620px) {
+    .advantages {
+        padding:calc(.0714285714 * 100vw + 4.2857142857px) 0
+    }
+
+    .advantages__title {
+        font-size: calc(.0306122449 * 100vw + .4081632653px);
+        margin-bottom: calc(.0408163265 * 100vw + 3.8775510204px)
+    }
+
+    .advantages__item {
+        gap: calc(.0204081633 * 100vw + -3.0612244898px);
+        padding: calc(.0306122449 * 100vw + -9.5918367347px);
+        border-radius: calc(.0102040816 * 100vw + 3.4693877551px)
+    }
+
+    .advantages__item p {
+        font-size: calc(.0142857143 * 100vw + .8571428571px)
+    }
+
+    .advantages__icon {
+        min-width: calc(.0663265306 * 100vw + 2.5510204082px);
+        max-width: calc(.0663265306 * 100vw + 2.5510204082px);
+        height: calc(.0663265306 * 100vw + 2.5510204082px);
+        border-radius: calc(.0102040816 * 100vw + 3.4693877551px)
+    }
+
+    .advantages__icon span {
+        font-size: calc(.0326530612 * 100vw + 7.1020408163px)
+    }
+
+    .advantages__icon img {
+        width: calc(.0357142857 * 100vw + 7.1428571429px)
+    }
+}
+
+@media (max-width: 640px) {
+    .advantages {
+        background-color:#efefef;
+        padding: 60px 0 90px;
+        margin-bottom: -30px;
+        position: relative
+    }
+
+    .advantages__title {
+        font-size: 30px;
+        margin-bottom: 25px
+    }
+
+    .advantages__item {
+        gap: 25px;
+        padding: 30px;
+        border-radius: 15px;
+        min-width: 300px;
+        max-width: 300px
+    }
+
+    .advantages__item p {
+        font-size: 20px
+    }
+
+    .advantages__icon {
+        min-width: 90px;
+        max-width: 90px;
+        height: 90px;
+        border-radius: 15px
+    }
+
+    .advantages__icon span {
+        font-size: 55px
+    }
+
+    .advantages__icon img {
+        width: 52px
+    }
+}
+
+@media (max-width: 640px) {
+    .advantages .swiper-adventages {
+        position:unset
+    }
+
+    .advantages .swiper-adventages-pagination {
+        bottom: 50px
+    }
+
+    .advantages .swiper-adventages-pagination-bullet {
+        width: 15px;
+        height: 15px;
+        margin: 0 6px!important
+    }
+}
+
+.advantages__icon img {
+    height: 70%;
+    width: 70%;
+}
