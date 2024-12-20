@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './CarCard.scss';
 import ArrowImg from '../../assets/images/arrow-bf5523e6.svg';
 
@@ -18,19 +18,35 @@ function getGradient(color) {
 }
 
 const CarCard = ({ model, discount, car, salon, offers, rate }) => {
-    const [selectedColor, setSelectedColor] = useState(Object.keys(car)[0]); // Первый цвет по умолчанию
     const [mode, setMode] = useState('exterior'); // Текущий режим: 'exterior' или 'interior'
+    const [currentIndex, setCurrentIndex] = useState(0); // Индекс текущего изображения
 
-    const handleColorChange = (color) => {
-        setSelectedColor(color); // Изменить выбранный цвет
+    const currentImages = mode === 'exterior' ? car : salon; // Выбор изображений в зависимости от режима
+    const imageKeys = Object.keys(currentImages);
+    const maxIndex = imageKeys.length - 1;
+
+    // Текущий цвет динамически определяется на основе текущего индекса
+    const selectedColor = imageKeys[currentIndex];
+
+    const handlePrev = () => {
+        setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : maxIndex));
+    };
+
+    const handleNext = () => {
+        setCurrentIndex((prevIndex) => (prevIndex < maxIndex ? prevIndex + 1 : 0));
     };
 
     const toggleMode = (newMode) => {
         setMode(newMode); // Переключить режим
-        setSelectedColor(Object.keys(newMode === 'exterior' ? car : salon)[0]); // Сбросить выбранный цвет
+        setCurrentIndex(0); // Сбросить индекс изображения
     };
 
-    const currentImages = mode === 'exterior' ? car : salon; // Выбор изображений в зависимости от режима
+    const handleColorChange = (color) => {
+        const newIndex = imageKeys.indexOf(color);
+        if (newIndex !== -1) {
+            setCurrentIndex(newIndex); // Установить индекс в соответствии с выбранным цветом
+        }
+    };
 
     return (
         <div className="car">
@@ -38,8 +54,18 @@ const CarCard = ({ model, discount, car, salon, offers, rate }) => {
                 <img className="car__car-of-the-year" src={rate} alt="" />
                 <div className="car__benefit">Выгода до {discount}</div>
                 <div className="swiper swiper-initialized swiper-horizontal swiper-pointer-events car__swiper">
-                    <div className="swiper-button-prev swiper-button-disabled"></div>
-                    <div className="swiper-button-next"></div>
+                    <div className="swiper-button-prev" onClick={handlePrev}>
+                        <div className="arrow-2">
+                            <div className="arrow-2-top"></div>
+                            <div className="arrow-2-bottom"></div>
+                        </div>
+                    </div>
+                    <div className="swiper-button-next" onClick={handleNext}>
+                        <div className="arrow-2">
+                            <div className="arrow-2-top"></div>
+                            <div className="arrow-2-bottom"></div>
+                        </div>
+                    </div>
                     <div className="swiper-wrapper">
                         <div className="swiper-slide car__slide swiper-lazy swiper-lazy-loaded swiper-slide-active">
                             <img
