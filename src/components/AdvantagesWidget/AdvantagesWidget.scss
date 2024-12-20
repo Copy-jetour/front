@@ -4,17 +4,17 @@
     margin-right: 20px;
 }
 
-.container-adventages {
-    width: 100%;
-    max-width: 1620px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
 @media (max-width: 640px) {
     .container-advantages {
         padding:0 10px
     }
+}
+
+.container-contacts {
+    width: 100%;
+    max-width: 1620px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .swiper-adventages {
@@ -358,7 +358,7 @@ button.swiper-adventages-pagination-bullet {
 }
 
 .advantages {
-    padding: 120px 0
+    padding: 120px 0;
 }
 
 .advantages__title {
