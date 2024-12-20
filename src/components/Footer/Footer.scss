@@ -1,36 +1,122 @@
 .footer {
-  background-color: #0d1238; // Тот же цвет, что и у Header
-  color: #ffffff;
-  padding: 30px 40px;
+  padding: 60px 0;
+  background-color: #454d56;
+  color: #fff;
+  line-height: normal;
+}
+
+.block-footer__action-info {
+  display: none;
+}
+
+.base-button--text {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  color: inherit;
+  padding: 0
+}
+
+.base-button--text:hover,.base-button--text:active,.base-button--text:focus {
+  background-color: transparent;
+  color: inherit;
+  text-decoration: underline
+}
+
+.container-footer {
+  width: 100%;
+  max-width: 1620px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer__top {
+  padding-bottom: 65px;
+  border-bottom: 2px solid;
+  border-image-source: linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.3) 25%,rgba(255,255,255,.3) 75%,rgba(255,255,255,0) 100%);
+  border-image-slice: 1
+}
+
+.footer__cars {
   display: flex;
-  justify-content: space-between;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 60px
+}
+
+.footer__car {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 500;
+  opacity: .3
+}
+
+.footer__car:hover {
+  opacity: 1
+}
+
+.footer__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 45px;
+  gap: 20px
+}
+
+.footer__button {
+  text-decoration: underline;
   font-size: 14px;
+  color:#fff;
+}
 
-  &__info {
-    line-height: 1.6;
+.footer__info {
+  text-align: center;
+  font-size: 14px
+}
 
-    a {
-      color: #f14c4c; // Красный цвет ссылок
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+@media (max-width: 1000px) {
+  .footer {
+      padding:40px 0
   }
 
-  &__nav {
-    display: flex;
-    gap: 20px;
+  .footer__top {
+      padding-bottom: 45px
+  }
 
-    &__link {
-      color: #ffffff;
-      text-decoration: none;
+  .footer__cars {
+      gap: 40px
+  }
 
-      &:hover {
-        color: #f14c4c; // Красный цвет при наведении
-      }
-    }
+  .footer__car {
+      gap: 7px;
+      font-size: 20px
+  }
+
+  .footer__bottom {
+      padding-top: 25px;
+      gap: 10px
+  }
+
+  .footer__button,.footer__info {
+      font-size: 12px
+  }
+}
+
+@media (max-width: 640px) {
+  .footer .container {
+      padding:0 15px
+  }
+
+  .footer__cars {
+      gap: 0;
+      flex-wrap: wrap
+  }
+
+  .footer__car {
+      width: 50%
   }
 }
