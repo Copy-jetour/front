@@ -64,13 +64,13 @@ const Header = () => {
             </div>
             <nav className={`header__nav ${isMenuOpen ? 'header__nav--open' : ''}`}>
                 <ul className="header__nav-list">
-                    <li><a href="#" className="header__nav-link">JETOUR DASHING</a></li>
-                    <li><a href="#" className="header__nav-link">JETOUR X90PLUS</a></li>
-                    <li><a href="#" className="header__nav-link">JETOUR X70PLUS</a></li>
-                    <li><a href="#" className="header__nav-link">JETOUR T2</a></li>
-                    <li><a href="#" className="header__nav-link">JETOUR X50</a></li>
-                    <li><a href="#" className="header__nav-link">КРЕДИТ</a></li>
-                    <li><a href="#" className="header__nav-link">КОНТАКТЫ</a></li>
+                    <li><a href="#dashing" className="header__nav-link">JETOUR DASHING</a></li>
+                    <li><a href="#x90plus" className="header__nav-link">JETOUR X90PLUS</a></li>
+                    <li><a href="#x70plus" className="header__nav-link">JETOUR X70PLUS</a></li>
+                    <li><a href="#t2" className="header__nav-link">JETOUR T2</a></li>
+                    <li><a href="#x50" className="header__nav-link">JETOUR X50</a></li>
+                    <li><a href="#credit" className="header__nav-link">КРЕДИТ</a></li>
+                    <li><a href="#contacts" className="header__nav-link">КОНТАКТЫ</a></li>
                     {isMenuOpen ? (<li><button className="header__callback-button">Заказать звонок</button></li>) : ''}
                 </ul>
             </nav>

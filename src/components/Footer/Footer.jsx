@@ -14,23 +14,23 @@ const Footer = () => {
                 <section className="footer__top">
                     <ul className="footer__cars">
                         <li className="footer__car">
-                            <img src="https://jetour-rolf.ru/assets/dashing-eb0234bb.png" alt="" />
+                            <a href='#dashing'><img src="https://jetour-rolf.ru/assets/dashing-eb0234bb.png" alt="" /></a>
                             <p>DASHING</p>
                         </li>
                         <li className="footer__car">
-                            <img src="https://jetour-rolf.ru/assets/x90plus-8d7fac97.png" alt="" />
+                            <a href='#x90plus'><img src="https://jetour-rolf.ru/assets/x90plus-8d7fac97.png" alt="" /></a>
                             <p>X90PLUS</p>
                         </li>
                         <li className="footer__car">
-                            <img src="https://jetour-rolf.ru/assets/x70plus-e03c9714.png" alt="" />
+                            <a href='#x70plus'><img src="https://jetour-rolf.ru/assets/x70plus-e03c9714.png" alt="" /></a>
                             <p>X70PLUS</p>
                         </li>
                         <li className="footer__car">
-                            <img src="https://jetour-rolf.ru/assets/t2-dfe9a5ab.png" alt="" />
+                            <a href='#t2'><img src="https://jetour-rolf.ru/assets/t2-dfe9a5ab.png" alt="" /></a>
                             <p>T2</p>
                         </li>
                         <li className="footer__car">
-                            <img src="https://jetour-rolf.ru/assets/x50-cfe86dd4.png" alt="" />
+                            <a href='#x50'><img src="https://jetour-rolf.ru/assets/x50-cfe86dd4.png" alt="" /></a>
                             <p>X50</p>
                         </li>
                     </ul>

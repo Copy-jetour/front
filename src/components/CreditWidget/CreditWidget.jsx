@@ -26,7 +26,7 @@ const CreditWidget = () => {
     };
 
     return (
-        <div className="widget-container">
+        <div className="widget-container" id='credit'>
             <div className="widget-content">
                 <h2 className="widget-title">Оформить кредит 0,01% <br /> без первого взноса!</h2>
                 <form

@@ -7,7 +7,7 @@ const MapWidget = () => {
     const position = [55.767210, 37.522926]; // Example coordinates for Moscow
 
     return (
-        <div className="map-widget">
+        <div className="map-widget" id='contacts'>
             <YMaps>
                 <Map
                     defaultState={{ center: [55.767210, 37.522926], zoom: 9 }}

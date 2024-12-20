@@ -12,6 +12,7 @@ function getGradient(color) {
         blue: 'linear-gradient(135deg, rgb(128, 155, 191), rgb(174, 191, 214), rgb(128, 155, 191))',
         light_grey: 'linear-gradient(135deg, rgb(178, 182, 187), rgb(205, 208, 215), rgb(178, 182, 187))',
         dark_blue: 'linear-gradient(135deg, rgb(11, 28, 58), rgb(70, 103, 164), rgb(15, 32, 63))',
+        milk: 'linear-gradient(135deg, rgb(202, 192, 169), rgb(239, 238, 234), rgb(202, 192, 169))',
         yellow: 'linear-gradient(135deg, rgb(146, 106, 74), rgb(225, 186, 150), rgb(146, 106, 74))'
     };
     return colors[color];
@@ -49,7 +50,7 @@ const CarCard = ({ model, discount, car, salon, offers, rate }) => {
     };
 
     return (
-        <div className="car">
+        <div className="car" id={model.toLowerCase()}>
             <div className="car-image-wrapper">
                 <img className="car__car-of-the-year" src={rate} alt="" />
                 <div className="car__benefit">Выгода до {discount}</div>
