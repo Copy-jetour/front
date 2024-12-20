@@ -5,7 +5,7 @@ import './AdvantagesWidget.scss';
 const AdvantagesWidget = () => {
     return (
         <div class="advantages">
-            <div class="container-adventages">
+            <div class="container-contacts">
                 <h2 class="advantages__title">ПРЕИМУЩЕСТВА</h2>
                 <div class="swiper-adventages swiper-adventages-initialized swiper-adventages-horizontal swiper-adventages-pointer-events advantages__list">
                     <div class="swiper-adventages-pagination swiper-adventages-pagination-clickable swiper-adventages-pagination-bullets swiper-adventages-pagination-horizontal swiper-adventages-pagination-lock">

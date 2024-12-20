@@ -1,0 +1,189 @@
+.image {
+    display: none;
+}
+
+.block-contacts {
+    position: relative
+}
+
+.block-contacts__map {
+    height: 736px
+}
+
+.base-phone {
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: .3em
+}
+
+.container-adventages {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none
+}
+
+.block-contacts__office {
+    pointer-events: auto;
+    width: 500px;
+    background-color: #fff;
+    box-shadow: 7px 4px 23.3px #00000057;
+    padding: 60px 70px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.logo__dealer {
+    width: calc(.1184210526 * 90vw + 44.2105263158px)
+}
+
+.logo__brand {
+    width: calc(.1184210526 * 90vw + 24.2105263158px)
+}
+
+.block-contacts__info {
+    display: flex;
+    flex-direction: column;
+    gap: calc(.0065789474* 100vw + 5.7894736842px);
+    font-size: calc(.0105263158* 100vw + 7.2631578947px);
+    line-height: 1;
+}
+
+.block-contacts__info p b {
+    color: #6d6d6d
+}
+
+.block-contacts__phone {
+    font-size: 25px;
+    font-weight: 700
+}
+
+.block-contacts__button {
+    font-size: 20px;
+    width: 320px;
+    height: 60px
+}
+
+@media (max-width: 1400px) {
+    .block-contacts__map {
+        height:calc(.3105263158 * 100vw + 301.2631578947px)
+    }
+
+    .block-contacts__office {
+        width: calc(.3947368421 * 100vw + 97.3684210526px);
+        padding: calc(.0394736842 * 100vw + 4.7368421053px) calc(.0394736842 * 100vw + 14.7368421053px);
+        border-radius: calc(.0394736842 * 100vw + -5.2631578947px);
+        gap: calc(.0394736842 * 100vw + -5.2631578947px)
+    }
+
+    .logo__dealer {
+        width: calc(.1184210526 * 100vw + 44.2105263158px)
+    }
+
+    .logo__brand {
+        width: calc(.1184210526 * 100vw + 24.2105263158px)
+    }
+
+    .block-contacts__info {
+        gap: calc(.0065789474 * 100vw + 5.7894736842px);
+        font-size: calc(.0105263158 * 100vw + 7.2631578947px)
+    }
+
+    .block-contacts__phone {
+        font-size: calc(.0118421053 * 100vw + 8.4210526316px)
+    }
+
+    .block-contacts__button {
+        font-size: calc(.0078947368 * 100vw + 8.9473684211px);
+        width: calc(.1578947368 * 100vw + 98.9473684211px);
+        height: calc(.0263157895 * 100vw + 23.1578947368px)
+    }
+}
+
+@media (max-width: 640px) {
+    .container-adventages {
+        position:unset;
+        top: 0;
+        transform: none;
+        padding: 0
+    }
+
+    .block-contacts__map {
+        height: 400px
+    }
+
+    .block-contacts__office {
+        width: 100%;
+        border-radius: 30px;
+        margin-bottom: -30px;
+        position: relative;
+        z-index: 3;
+        box-shadow: 3.92px 2.24px 13.06px #00000057;
+        padding: 35px 40px;
+        gap: 30px
+    }
+
+    .logo__dealer {
+        width: 130px
+    }
+
+    .logo__brand {
+        width: 115px
+    }
+
+    .block-contacts__info {
+        gap: 10px;
+        font-size: 12px
+    }
+
+    .block-contacts__phone {
+        font-size: 14px
+    }
+
+    .block-contacts__button {
+        font-size: 12px;
+        width: 200px;
+        height: 35px
+    }
+}
+
+.map-widget {
+    position: relative;
+    height: 800px;
+    width: 100%;
+  }
+
+  .map {
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .widget-card {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    width: 30%;
+    z-index: 1000;
+  }
+
+  .widget-button:hover {
+    background-color: #45a049;
+  }
+
+  .decor {
+    margin-block-start: 0 !important;
+    margin-block-end: 0 !important;
+  }
