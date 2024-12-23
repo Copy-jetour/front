@@ -312,8 +312,6 @@
     display: block;
     height: 8px;
     width: 5px;
-    top: 2px;
-    left: 4px;
     border: 2px solid #ffffff;
     border-left: 0;
     border-top: 0;
@@ -326,8 +324,6 @@
     content: "";
     position: absolute;
     display: block;
-    top: 50%;
-    left: 50%;
     transform: translate(-50%,-50%) scale(0);
     transition: transform .15s ease-in-out;
     height: 8px;
