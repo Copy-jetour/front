@@ -20,32 +20,37 @@ function getGradient(color) {
 
 const CarCard = ({ model, discount, car, salon, offers, rate, openModal }) => {
     const [mode, setMode] = useState('exterior'); // Текущий режим: 'exterior' или 'interior'
-    const [currentIndex, setCurrentIndex] = useState(0); // Индекс текущего изображения
+    const [currentColorIndex, setCurrentColorIndex] = useState(0); // Индекс текущего цвета
+    const [currentImageIndex, setCurrentImageIndex] = useState(1); // Индекс текущего изображения внутри цвета
 
     const currentImages = mode === 'exterior' ? car : salon; // Выбор изображений в зависимости от режима
-    const imageKeys = Object.keys(currentImages);
-    const maxIndex = imageKeys.length - 1;
-
-    // Текущий цвет динамически определяется на основе текущего индекса
-    const selectedColor = imageKeys[currentIndex];
+    const colorKeys = Object.keys(currentImages);
+    const currentColor = colorKeys[currentColorIndex];
+    const maxImageIndex = Object.keys(currentImages[currentColor]).length;
 
     const handlePrev = () => {
-        setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : maxIndex));
+        if (currentImageIndex > 1) {
+            setCurrentImageIndex((prevIndex) => prevIndex - 1);
+        }
     };
 
     const handleNext = () => {
-        setCurrentIndex((prevIndex) => (prevIndex < maxIndex ? prevIndex + 1 : 0));
+        if (currentImageIndex < maxImageIndex) {
+            setCurrentImageIndex((prevIndex) => prevIndex + 1);
+        }
     };
 
     const toggleMode = (newMode) => {
         setMode(newMode); // Переключить режим
-        setCurrentIndex(0); // Сбросить индекс изображения
+        setCurrentColorIndex(0); // Сбросить индекс цвета
+        setCurrentImageIndex(1); // Сбросить индекс изображения
     };
 
     const handleColorChange = (color) => {
-        const newIndex = imageKeys.indexOf(color);
-        if (newIndex !== -1) {
-            setCurrentIndex(newIndex); // Установить индекс в соответствии с выбранным цветом
+        const newColorIndex = colorKeys.indexOf(color);
+        if (newColorIndex !== -1) {
+            setCurrentColorIndex(newColorIndex); // Установить новый цвет
+            setCurrentImageIndex(1); // Сбросить индекс изображения
         }
     };
 
@@ -55,23 +60,27 @@ const CarCard = ({ model, discount, car, salon, offers, rate, openModal }) => {
                 <img className="car__car-of-the-year" src={rate} alt="" />
                 <div className="car__benefit">Выгода до {discount}</div>
                 <div className="swiper swiper-initialized swiper-horizontal swiper-pointer-events car__swiper">
-                    <div className="swiper-button-prev" onClick={handlePrev}>
-                        <div className="arrow-2">
-                            <div className="arrow-2-top"></div>
-                            <div className="arrow-2-bottom"></div>
+                    {maxImageIndex > 1 && currentImageIndex > 1 && (
+                        <div className="swiper-button-prev" onClick={handlePrev}>
+                            <div className="arrow-2">
+                                <div className="arrow-2-top"></div>
+                                <div className="arrow-2-bottom"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div className="swiper-button-next" onClick={handleNext}>
-                        <div className="arrow-2">
-                            <div className="arrow-2-top"></div>
-                            <div className="arrow-2-bottom"></div>
+                    )}
+                    {maxImageIndex > 1 && currentImageIndex < maxImageIndex && (
+                        <div className="swiper-button-next" onClick={handleNext}>
+                            <div className="arrow-2">
+                                <div className="arrow-2-top"></div>
+                                <div className="arrow-2-bottom"></div>
+                            </div>
                         </div>
-                    </div>
+                    )}
                     <div className="swiper-wrapper">
                         <div className="swiper-slide car__slide swiper-lazy swiper-lazy-loaded swiper-slide-active">
                             <img
-                                src={currentImages[selectedColor]}
-                                alt={`${model} - ${selectedColor}`}
+                                src={currentImages[currentColor][currentImageIndex]} // Выбор картинки по текущему цвету и индексу
+                                alt={`${model} - ${currentColor} - ${currentImageIndex}`}
                                 className="car__img"
                             />
                         </div>
@@ -102,13 +111,13 @@ const CarCard = ({ model, discount, car, salon, offers, rate, openModal }) => {
                     </div>
                 </div>
                 <div className="car__colors">
-                    {Object.keys(currentImages).map((color) => (
+                    {colorKeys.map((color) => (
                         <div
                             key={color}
                             className="car__color"
                             style={{
                                 background: getGradient(color),
-                                border: selectedColor === color ? '6px solid #ccc' : '6px solid #efefef',
+                                border: currentColor === color ? '6px solid #ccc' : '6px solid #efefef',
                             }}
                             onClick={() => handleColorChange(color)}
                         ></div>
