@@ -3,7 +3,7 @@ import { YMaps, Map, Placemark, ZoomControl } from '@pbe/react-yandex-maps';
 import ImgPlacemark from '../../assets/images/placemark-af34a028.svg';
 import './MapWidget.scss';
 
-const MapWidget = () => {
+const MapWidget = ({ openModal }) => {
     const position = [55.767210, 37.522926]; // Example coordinates for Moscow
 
     return (
@@ -41,11 +41,11 @@ const MapWidget = () => {
                             </a>
                             <p className="decor"><b>Время работы:</b></p><p className="decor">Ежедневно с 9:00 до 22:00</p>
                         </div>
-                        <button type="button" className="base-button base-button--primary base-button--bordered block-contacts__button" data-test="callback">Заказать звонок</button>
+                        <button type="button" className="base-button base-button--primary base-button--bordered block-contacts__button" onClick={() => openModal('Глобавльный запрос: Заказать звонок')}>Заказать звонок</button>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

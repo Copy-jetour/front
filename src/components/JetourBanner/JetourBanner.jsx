@@ -3,14 +3,14 @@ import { useSwipeable } from 'react-swipeable';
 import './JetourBanner.scss';
 
 const images = [
-  { src: require('../../assets/images/image1.jpg'), benefit: 'ВЫГОДА ДО 320 000₽' },
-  { src: require('../../assets/images/image2.jpg'), benefit: 'ВЫГОДА ДО 570 000₽' },
-  { src: require('../../assets/images/image3.jpg'), benefit: 'ВЫГОДА ДО 620 000₽' },
-  { src: require('../../assets/images/image4.jpg'), benefit: 'ВЫГОДА ДО 520 000₽' },
-  { src: require('../../assets/images/image5.jpg'), benefit: 'УЖЕ В НАЛИЧИИ' },
+  { src: require('../../assets/images/image1.jpg'), benefit: 'ВЫГОДА ДО 320 000₽', model: 'T2' },
+  { src: require('../../assets/images/image2.jpg'), benefit: 'ВЫГОДА ДО 570 000₽', model: 'DASHING' },
+  { src: require('../../assets/images/image3.jpg'), benefit: 'ВЫГОДА ДО 620 000₽', model: 'X90PLUS' },
+  { src: require('../../assets/images/image4.jpg'), benefit: 'ВЫГОДА ДО 520 000₽', model: 'X70PLUS' },
+  { src: require('../../assets/images/image5.jpg'), benefit: 'УЖЕ В НАЛИЧИИ', model: 'X50' },
 ];
 
-const JetourBanner = () => {
+const JetourBanner = ({ openModal }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [dragStartX, setDragStartX] = useState(null); // Начальная точка касания/перемещения
   const [dragOffset, setDragOffset] = useState(0); // Смещение по оси X
@@ -83,8 +83,8 @@ const JetourBanner = () => {
           <h1 className="block-main__subtitle">{images[currentIndex].benefit}</h1>
         </div>
         <div className="container">
-          <button className="header__callback-button bunner-button">Получить предложение</button>
-          <button className="bunner__callback-button bunner-button">Записаться на тест-драйв</button>
+          <button className="header__callback-button bunner-button" onClick={() => openModal(`Банер: Получить предложение - ${images[currentIndex].model}`)}>Получить предложение</button>
+          <button className="bunner__callback-button bunner-button" onClick={() => openModal(`Банер: Записаться на тест-драйв - ${images[currentIndex].model}`)}>Записаться на тест-драйв</button>
         </div>
       </div>
       <div className="jetour-banner__dots">

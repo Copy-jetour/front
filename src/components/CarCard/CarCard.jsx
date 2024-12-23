@@ -18,7 +18,7 @@ function getGradient(color) {
     return colors[color];
 }
 
-const CarCard = ({ model, discount, car, salon, offers, rate }) => {
+const CarCard = ({ model, discount, car, salon, offers, rate, openModal }) => {
     const [mode, setMode] = useState('exterior'); // Текущий режим: 'exterior' или 'interior'
     const [currentIndex, setCurrentIndex] = useState(0); // Индекс текущего изображения
 
@@ -126,8 +126,8 @@ const CarCard = ({ model, discount, car, salon, offers, rate }) => {
                     ))}
                 </div>
                 <div className="car__btns">
-                    <button type="button" className="base-button base-button--grey base-button--bordered car__btn" data-test="callback">Узнать цену по акции</button>
-                    <button type="button" className="base-button base-button--primary base-button--bordered car__btn" data-test="callback">Получить предложение</button>
+                    <button type="button" className="base-button base-button--grey base-button--bordered car__btn" onClick={() => openModal(`Car: Узнать цену по акции - ${model}`)}>Узнать цену по акции</button>
+                    <button type="button" className="base-button base-button--primary base-button--bordered car__btn" onClick={() => openModal(`Car: Получить предложение - ${model}`)}>Получить предложение</button>
                 </div>
             </div>
         </div>

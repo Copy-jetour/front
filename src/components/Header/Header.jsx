@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Header.scss';
 import PhoneImg from '../../assets/images/phone-508bd2d3.svg'
 
-const Header = () => {
+const Header = ({ openModal }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isSmallScreen, setIsSmallScreen] = useState(false);
 
@@ -46,7 +46,7 @@ const Header = () => {
                 </div>
                 <div className="header__contact">
                     {isSmallScreen ? '' : (<a href="tel:+74952921025" className="header__phone base-phone">+7 (495) 292-10-25</a>)}
-                    {isSmallScreen ? '' : (<button className="header__callback-button">Заказать звонок</button>)}
+                    {isSmallScreen ? '' : (<button className="header__callback-button" onClick={() => openModal('Глобальный запрос: Заказать звонок')}>Заказать звонок</button>)}
                     {isSmallScreen ? (
                         <a href="tel:+74952923237" className="base-phone block-contacts__phone">
                             <img src={PhoneImg} alt="+7&nbsp;(495)&nbsp;780‑40‑75" className="base-phone__icon image" />

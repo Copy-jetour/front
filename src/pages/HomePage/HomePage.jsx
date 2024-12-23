@@ -94,7 +94,7 @@ const cars = [
     },
 ];
 
-const HomePage = () => {
+const HomePage = ({ openModal }) => {
     return (
         <div className="homepage">
             <div className="homepage__cars">
@@ -107,6 +107,7 @@ const HomePage = () => {
                         salon={car.salon} // Можно использовать для другого функционала
                         offers={car.offers}
                         rate={car.rate}
+                        openModal={openModal}
                     />
                 ))}
             </div>
