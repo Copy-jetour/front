@@ -67,13 +67,14 @@ const CreditWidget = () => {
                                 </div>
                             </div>
                         </div>
-                        <button
-                            type="submit"
-                            className={`basel-button basel-button--primary basel-button--bordered basel-button--block form__btn ${(!agreed || !isValidPhone) ? 'basel-button--disabled' : ''}`}
-                            disabled={!agreed || !isValidPhone}
-                        >
-                            Оставить заявку
-                        </button>
+                        <div>
+                            <button
+                                type="submit"
+                                className={`basel-button basel-button--primary basel-button--bordered basel-button--block form__btn ${(!agreed || !isValidPhone) ? 'basel-button--disabled' : ''}`}
+                                disabled={!agreed || !isValidPhone}
+                            >
+                                Оставить заявку
+                            </button></div>
                         <label className="form__agreement basel-checkbox" htmlFor="agreement">
                             <input
                                 id="agreement"

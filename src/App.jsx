@@ -25,17 +25,15 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div>
       <Header openModal={openModal} />
-      <main>
-        <JetourBanner openModal={openModal} />
-        <Widget openModal={openModal} />
-        <HomePage openModal={openModal} />
-        <CreditWidget openModal={openModal} />
-        <AdvantagesWidget openModal={openModal} />
-        <MapWidget openModal={openModal} />
-        <Footer />
-      </main>
+      <JetourBanner openModal={openModal} />
+      <Widget openModal={openModal} />
+      <HomePage openModal={openModal} />
+      <CreditWidget openModal={openModal} />
+      <AdvantagesWidget openModal={openModal} />
+      <MapWidget openModal={openModal} />
+      <Footer />
       <Modal isOpen={isModalOpen} onClose={closeModal} parameter={modalParameter} />
     </div>
   );

@@ -158,6 +158,10 @@
     .block-clock__icon {
         width: 20%;
     }
+
+    .widget {
+        padding: 0px 0;
+    }
 }
 
 /* Анимация пульсации для изображения */
@@ -198,6 +202,12 @@
 @media (max-width: 640px) {
     .block-clock__btn {
         width: 60%;
+    }
+
+    .block-clock__title {
+        font-size: 30px;
+        width: 50%;
+        padding-right: 50%;
     }
 }
 

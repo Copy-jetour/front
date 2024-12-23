@@ -135,6 +135,11 @@
         gap: 30px
     }
 
+    .logo {
+        flex-wrap: wrap !important;
+        gap: 15px;
+    }
+
     .logo__dealer {
         width: 130px
     }
@@ -154,9 +159,13 @@
 
     .block-contacts__button {
         font-size: 12px;
-        width: 200px;
+        width: 100%;
         height: 35px
     }
+
+    .widget-card {
+        top: 10% !important;
+      }
 }
 
 .map-widget {
