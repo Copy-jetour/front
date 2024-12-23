@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import InputMask from 'react-input-mask';
+import emailjs from 'emailjs-com';
 import './Modal.scss';
 import CloseImg from "../../assets/images/close-18403a2f.svg";
 
-const Modal = ({ isOpen, onClose }) => {
+const Modal = ({ isOpen, onClose, parameter }) => {
+    console.log("Юзер АйДи: " + process.env.REACT_APP_EMAIL_USER_PUBLIC_KEY)
+    emailjs.init(process.env.REACT_APP_EMAIL_USER_PUBLIC_KEY);
     const [phone, setPhone] = useState('');
     const [isValidPhone, setIsValidPhone] = useState(false);
     const [agreed, setAgreed] = useState(false);
@@ -11,25 +14,38 @@ const Modal = ({ isOpen, onClose }) => {
     const handlePhoneChange = (e) => {
         const value = e.target.value;
         setPhone(value);
-
-
-
-        // Проверка номера телефона (например, полный формат: +7 (XXX) XXX-XX-XX)
         const phoneRegex = /^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/;
         setIsValidPhone(phoneRegex.test(value));
+    };
+
+    const sendEmail = (phone, parameter) => {
+        const templateParams = {
+            telephone: phone,
+            description: parameter,
+        };
+
+
+        emailjs.send(process.env.REACT_APP_EMAIL_SERVICE_ID, process.env.REACT_APP_EMAIL_TEMPLATE_ID, templateParams)
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Заявка отправлена!');
+            }, (error) => {
+                console.log('FAILED...', error);
+                alert('Ошибка отправки заявки. Попробуйте позже.');
+            });
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (agreed && isValidPhone) {
-            alert('Заявка отправлена!');
+            sendEmail(phone, parameter);
         } else {
             alert('Заполните все поля корректно и подтвердите согласие.');
         }
     };
 
     if (!isOpen) {
-        return <div style={{ display: 'none' }} />;
+        return null;
     }
 
     return (

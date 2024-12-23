@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import InputMask from 'react-input-mask';
+import emailjs from 'emailjs-com';
 import './CreditWidget.scss';
 
 const CreditWidget = () => {
+    console.log("Юзер АйДи: " + process.env.REACT_APP_EMAIL_USER_PUBLIC_KEY)
+    emailjs.init(process.env.REACT_APP_EMAIL_USER_PUBLIC_KEY);
     const [phone, setPhone] = useState('');
     const [isValidPhone, setIsValidPhone] = useState(false);
     const [agreed, setAgreed] = useState(false);
@@ -10,16 +13,31 @@ const CreditWidget = () => {
     const handlePhoneChange = (e) => {
         const value = e.target.value;
         setPhone(value);
-
-        // Проверка номера телефона (например, полный формат: +7 (XXX) XXX-XX-XX)
         const phoneRegex = /^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/;
         setIsValidPhone(phoneRegex.test(value));
+    };
+
+    const sendEmail = (phone, parameter) => {
+        const templateParams = {
+            telephone: phone,
+            description: parameter,
+        };
+
+
+        emailjs.send(process.env.REACT_APP_EMAIL_SERVICE_ID, process.env.REACT_APP_EMAIL_TEMPLATE_ID, templateParams)
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Заявка отправлена!');
+            }, (error) => {
+                console.log('FAILED...', error);
+                alert('Ошибка отправки заявки. Попробуйте позже.');
+            });
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (agreed && isValidPhone) {
-            alert('Заявка отправлена!');
+            sendEmail(phone, 'Заявка с кредита (Оформление 0,01% без первого взноса)');
         } else {
             alert('Заполните все поля корректно и подтвердите согласие.');
         }
