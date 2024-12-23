@@ -15,6 +15,32 @@
     max-height: 582px;
   }
 
+  @media(max-width: 650px){
+    .widget-container {
+        width: 100%;
+        background-image: url(../../assets/images/credit_m-f5ab3114.png); /* Путь к вашему изображению */
+        height: 90.3125vw;
+        flex-wrap: wrap;
+        background-position: center center;
+    }
+
+    .form--horizontal .form__wrapper{
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 15px !important;
+    }
+
+    .widget-content {
+        align-items: center !important;
+        top: 30% !important;
+    }
+
+    .widget-title {
+        padding-top: 100px !important;
+        font-size:x-large !important;
+    }
+}
+
   /* Контент */
   .widget-content {
     top: 10%;
@@ -37,11 +63,6 @@
 
   }
 
-@media (max-width: 1200px) {
-    .widget-title {
-        font-size: calc(.0357142857* 100vw + -2.8571428571px);
-    }
-}
 
   /* Горизонтальная форма */
   .widget-form-horizontal {

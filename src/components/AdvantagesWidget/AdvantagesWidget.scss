@@ -6,7 +6,12 @@
 
 @media (max-width: 640px) {
     .container-advantages {
-        padding:0 10px
+        padding: 0 10px
+    }
+
+    .container-contacts {
+        width: 95%;
+        padding: 0 10px !important
     }
 }
 
@@ -353,7 +358,7 @@ button.swiper-adventages-pagination-bullet {
     display: none
 }
 
-[data-v-19e5924d]:root {
+:root {
     --swiper-adventages-theme-color: #4caa93
 }
 
