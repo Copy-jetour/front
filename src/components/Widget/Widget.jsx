@@ -21,7 +21,7 @@ const splitTime = (days, hours, minutes, seconds) => {
     };
 };
 
-const Widget = () => {
+const Widget = ({ openModal }) => {
     const [timeLeft, setTimeLeft] = useState({ days: 9, hours: 0, minutes: 4, seconds: 35 });
     const [splitDigits, setSplitDigits] = useState(splitTime(9, 0, 4, 35));
 
@@ -92,7 +92,7 @@ const Widget = () => {
                             </div>
                         </div>
                     </div>
-                    <button className="base-button base-button--primary base-button--bordered block-clock__btn">Зафиксировать выгоду</button>
+                    <button className="base-button base-button--primary base-button--bordered block-clock__btn" onClick={() => openModal(`Зафиксировать выгоду: ${timeLeft.days} дней ${timeLeft.hours} часов ${timeLeft.minutes} минут ${timeLeft.seconds} секунд`)}>Зафиксировать выгоду</button>
                 </div>
                 <div className="block-offer" alt="Car">
                     <div className="block-offer__content">
