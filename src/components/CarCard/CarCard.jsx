@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './CarCard.scss';
 import ArrowImg from '../../assets/images/arrow-bf5523e6.svg';
 
@@ -11,6 +11,8 @@ function getGradient(color) {
         grey: 'linear-gradient(135deg, rgb(51, 56, 62), rgb(143, 151, 170), rgb(45, 49, 54))',
         blue: 'linear-gradient(135deg, rgb(128, 155, 191), rgb(174, 191, 214), rgb(128, 155, 191))',
         light_grey: 'linear-gradient(135deg, rgb(178, 182, 187), rgb(205, 208, 215), rgb(178, 182, 187))',
+        blue1: 'linear-gradient(135deg, rgb(128, 155, 191), rgb(174, 191, 214), rgb(128, 155, 191))',
+        light_grey1: 'linear-gradient(135deg, rgb(178, 182, 187), rgb(205, 208, 215), rgb(178, 182, 187))',
         dark_blue: 'linear-gradient(135deg, rgb(11, 28, 58), rgb(70, 103, 164), rgb(15, 32, 63))',
         milk: 'linear-gradient(135deg, rgb(202, 192, 169), rgb(239, 238, 234), rgb(202, 192, 169))',
         yellow: 'linear-gradient(135deg, rgb(146, 106, 74), rgb(225, 186, 150), rgb(146, 106, 74))'

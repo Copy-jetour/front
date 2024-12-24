@@ -208,7 +208,7 @@ const cars = [
                 6: 'https://jetour-rolf.ru/assets/6-d8122bb9.jpg',
                 7: 'https://jetour-rolf.ru/assets/7-48b07e51.jpg'
             },
-            blue: {
+            blue1: {
                 1: 'https://jetour-rolf.ru/assets/1-0040a6c0.jpg',
                 2: 'https://jetour-rolf.ru/assets/2-c06dc8e8.jpg',
                 3: 'https://jetour-rolf.ru/assets/3-10fee938.jpg',
@@ -273,7 +273,7 @@ const cars = [
             white: {
                 1: 'https://jetour-rolf.ru/assets/1-5576b28e.jpg',
             },
-            light_grey: {
+            light_grey1: {
                 1: 'https://jetour-rolf.ru/assets/1-b05520e0.jpg',
             },
         },
