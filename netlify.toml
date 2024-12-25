@@ -1,0 +1,4 @@
+[build.environment]
+  REACT_APP_EMAIL_SERVICE_ID = "service_xyspaws"
+  REACT_APP_EMAIL_TEMPLATE_ID = "template_2b868sb"
+  REACT_APP_EMAIL_USER_PUBLIC_KEY = "ayrfv2fDCTSlw_UhE"
