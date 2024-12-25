@@ -54,6 +54,16 @@
   margin-right: 20px;
 }
 
+.container {
+  position: relative;
+  z-index: 1000; /* Увеличение z-index, чтобы кнопки были выше остальных элементов */
+}
+
+button {
+  pointer-events: auto; /* Убедимся, что события кликов доступны */
+}
+
+
 .header__phone:hover {
   color: #f14c4c;
 }

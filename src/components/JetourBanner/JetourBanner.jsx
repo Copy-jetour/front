@@ -12,8 +12,8 @@ const images = [
 
 const JetourBanner = ({ openModal }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [dragStartX, setDragStartX] = useState(null); // Начальная точка касания/перемещения
-  const [dragOffset, setDragOffset] = useState(0); // Смещение по оси X
+  const [dragStartX, setDragStartX] = useState(null);
+  const [dragOffset, setDragOffset] = useState(0);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -24,12 +24,12 @@ const JetourBanner = ({ openModal }) => {
   };
 
   const handleMouseDown = (e) => {
-    setDragStartX(e.clientX || e.touches[0].clientX);
+    setDragStartX(e.clientX || e.touches?.[0]?.clientX || 0);
   };
 
   const handleMouseMove = (e) => {
     if (dragStartX !== null) {
-      const currentX = e.clientX || e.touches[0].clientX;
+      const currentX = e.clientX || e.touches?.[0]?.clientX || 0;
       setDragOffset(currentX - dragStartX);
     }
   };
@@ -40,8 +40,8 @@ const JetourBanner = ({ openModal }) => {
     } else if (dragOffset < -50) {
       nextSlide();
     }
-    setDragOffset(0); // Сброс смещения
-    setDragStartX(null); // Сброс точки начала
+    setDragOffset(0);
+    setDragStartX(null);
   };
 
   const swipeHandlers = useSwipeable({
@@ -83,8 +83,18 @@ const JetourBanner = ({ openModal }) => {
           <h1 className="block-main__subtitle">{images[currentIndex].benefit}</h1>
         </div>
         <div className="container">
-          <button className="header__callback-button bunner-button" onClick={() => openModal(`Банер: Получить предложение - ${images[currentIndex].model}`)}>Получить предложение</button>
-          <button className="bunner__callback-button bunner-button" onClick={() => openModal(`Банер: Записаться на тест-драйв - ${images[currentIndex].model}`)}>Записаться на тест-драйв</button>
+          <button
+            className="header__callback-button bunner-button"
+            onClick={() => openModal(`Банер: Получить предложение - ${images[currentIndex].model}`)}
+          >
+            Получить предложение
+          </button>
+          <button
+            className="bunner__callback-button bunner-button"
+            onClick={() => openModal(`Банер: Записаться на тест-драйв - ${images[currentIndex].model}`)}
+          >
+            Записаться на тест-драйв
+          </button>
         </div>
       </div>
       <div className="jetour-banner__dots">
